@@ -1,10 +1,9 @@
 # Destinia - prueba técnica
 ___
 
-__Tiempo de realización de la prueba: 4 horas y 30 minutos (aprox)__
+__Tiempo de realización de la prueba: 4 horas y 30 minutos (aprox)__.
 
 ## Requirementos planteados
-___
 *Queremos implementar una pequeña aplicación en PHP que, tomando las tres primeras letras de la entrada estándar, devuelva por la salida estándar todas las coincidencias de hospedajes existentes en una determinada base de datos, ordenados por nombre, incluyendo sus características y su ubicación.*
 
 *Tenemos dos tipos de hospedajes, Hoteles y Apartamentos, cada uno con sus características específicas. En el caso de los hoteles, además de su nombre, necesitamos conocer el número de estrellas y el tipo de habitación estándar que tienen (dejamos a tu elección proponer unos cuantos tipos de habitación como doble, doble con vistas, ...). En el caso de los apartamentos y además de su nombre, necesitamos conocer para cada propiedad cuantos apartamentos tienen disponibles y para cuantos adultos tienen capacidad, teniendo en cuenta que sólo tienen un tipo de apartamentos.*
@@ -20,7 +19,6 @@ ___
 * *Apartamentos Sol y playa, 50 apartamentos, 6 adultos, Málaga, Málaga*
 
 ## Configurar fichero de variables de entorno
-___
 
 Windows:
 ```
@@ -32,12 +30,11 @@ Linux & Mac:
 cp .env.dist .env
 ```
 
-
 ## Entorno docker
 
 * PHP 8.1
-___
 
+Ejecutar en la directorio root del proyecto:
 ```bash
 docker-compose -p destinia-prueba-tecnica --env-file .env up -d
 ```
@@ -55,7 +52,6 @@ vendor/bin/phpunit
 ```
 
 ## Script de creación de la base de datos
-___
 Estructura de la base de datos:
 ```sql
 create table room_type
@@ -125,7 +121,6 @@ INSERT INTO destinia_db.hotel (id, stars_number, room_type_id) VALUES (4, 3, 2);
 ```
 
 ## Ficheros de traducciones
-___
 Para cambiar el idioma de la interfaz es necesario modificar la variable de entorno 'LANGUAGE' en el fichero [.env](.env)
 
 Directorio de traducciones de texto de la interfaz:
