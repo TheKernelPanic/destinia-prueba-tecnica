@@ -2,6 +2,9 @@ FROM ubuntu:20.04
 
 MAINTAINER "Jorge García"
 
+RUN ln -snf /usr/share/zoneinfo/UTC /etc/localtime && \
+    echo UTC > /etc/timezone
+
 ENV PHP_VERSION=8.1
 
 # Install PHP & extensions & composer
@@ -16,5 +19,4 @@ RUN apt update && \
     mkdir /usr/share/destinia-prueba-tecnica
 
 # Locales configuration
-RUN locale-gen es_ES && \
-    locale-gen en_EN
+RUN locale-gen es_ES
