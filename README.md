@@ -18,6 +18,80 @@ __Tiempo de realización de la prueba: 4 horas y 30 minutos (aprox)__.
 * *Hotel Rojo, 3 estrellas, habitación sencilla, Sanlucar, Cádiz*
 * *Apartamentos Sol y playa, 50 apartamentos, 6 adultos, Málaga, Málaga*
 
+## Diagrama de clases (plantuml)
+
+Servicios y persistencia:
+```
+@startuml
+
+Repository *-- DatabaseConnectorInterface
+Repository <|-- AccommodationPlaceRepository
+AccommodationPlaceRepository o-- AccommodationPlaceRepositoryInterface
+DatabaseConnectorInterface o-- MySQLConnector
+AcccommodationPlaceService <|-- FinderService
+AcccommodationPlaceService *-- AccommodationPlaceRepositoryInterface
+
+abstract Repository
+interface DatabaseConnectorInterface
+interface AccommodationPlaceRepositoryInterface
+class AccommodationPlaceRepository
+class MySQLConnector
+class FinderService
+
+Repository : #connector
+
+DatabaseConnectorInterface : +read()
+MySQLConnector : +read()
+
+AccommodationPlaceRepository : +find()
+AccommodationPlaceRepositoryInterface : +find()
+
+AcccommodationPlaceService : #repository
+FinderService : __invoke()
+
+@enduml
+```
+
+Dominio:
+```
+@startuml
+
+AccommodationPlace <|-- Apartments
+AccommodationPlace <|-- Hotel
+AccommodationPlacePlainFormatter o-- AccommodationPlaceFormatter
+
+abstract AccommodationPlace
+class Hotel
+class Apartments
+interface AccommodationPlaceFormatter
+class AccommodationPlacePlainFormatter
+
+AccommodationPlace : -id
+AccommodationPlace : -city
+AccommodationPlace : -province
+AccommodationPlace : -cannonicalName
+AccommodationPlace : -slug
+AccommodationPlace : {abstract} +format(formatter: AccommodationPlaceFormatter)
+
+Hotel : -roomType
+Hotel : -starsNumber
+Hotel : +format(formatter: AccommodationPlaceFormatter)
+
+Apartments : -adultsAllowed
+Apartments : -amountAvailable
+Apartments : +format(formatter: AccommodationPlaceFormatter)
+
+AccommodationPlacePlainFormatter : +getCollection()
+AccommodationPlacePlainFormatter : +append()
+
+AccommodationPlaceFormatter : +getCollection()
+AccommodationPlaceFormatter : +append()
+
+note top of AccommodationPlacePlainFormatter : Formatear entidad en texto plano para la salida estandar
+
+@enduml
+```
+
 ## Configurar fichero de variables de entorno
 
 Windows:
