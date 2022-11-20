@@ -21,7 +21,7 @@ __Tiempo de realización de la prueba: 4 horas y 30 minutos (aprox)__.
 ## Diagrama de clases (plantuml)
 
 Servicios y persistencia:
-```
+```plantuml
 @startuml
 
 Repository *-- DatabaseConnectorInterface
@@ -53,7 +53,7 @@ FinderService : __invoke()
 ```
 
 Dominio:
-```
+```plantuml
 @startuml
 
 AccommodationPlace <|-- Apartments
