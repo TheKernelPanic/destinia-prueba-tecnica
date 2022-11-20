@@ -1,0 +1,38 @@
+msgid "Please insert a valid value"
+msgstr "Por favor, introduzca un valor válido"
+
+msgid "Hotel %s"
+msgstr "Hotel %s"
+
+msgid "%s stars"
+msgstr "%s estrellas"
+
+msgid "Apartments %s"
+msgstr "Apartamentos %s"
+
+msgid "%s apartments"
+msgstr "%s apartamentos"
+
+msgid "%s adults"
+msgstr "%s adultos"
+
+msgid "Search for a place of accommodation"
+msgstr "Buscar un lugar de acomodamiento"
+
+msgid "Enter a search value"
+msgstr "Introduzca un valor de búsqueda"
+
+msgid "No results found"
+msgstr "No se han encontrado resultados"
+
+msgid "Found %s results"
+msgstr "Se han encontrado %s resultados"
+
+msgid "Double room"
+msgstr "Habitación doble"
+
+msgid "Simple room"
+msgstr "Habitación simple"
+
+msgid "Double room with views"
+msgstr "Habitación doble con vistas"

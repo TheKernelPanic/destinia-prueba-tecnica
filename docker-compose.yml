@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  application:
+    build: .
+    image: destinia-php-environment:latest
+    container_name: destinia_application
+    tty: true
+    working_dir: /usr/share/destinia-prueba-tecnica
+    volumes:
+      - "./:/usr/share/destinia-prueba-tecnica"
+  database:
+    image: mysql:latest
+    container_name: destinia_database
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./.mysql:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${DATABASE_USER}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}

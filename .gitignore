@@ -1,0 +1,6 @@
+.env
+/.mysql/
+/vendor/
+/.phpunit.cache/
+locale/**/LC_MESSAGES/*.mo
+/.idea/

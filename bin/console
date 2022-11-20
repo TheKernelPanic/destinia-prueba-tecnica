@@ -1,0 +1,8 @@
+#!/usr/bin/php
+<?php
+
+use DestiniaPruebaTecnica\cli\AccommodationPlaceFinderCLI;
+
+$service = require_once __DIR__ . '/../bootstrap.php';
+
+(new AccommodationPlaceFinderCLI(service: $service))->run();
