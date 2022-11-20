@@ -7,7 +7,7 @@ use DestiniaPruebaTecnica\domain\AccommodationPlace;
 use DestiniaPruebaTecnica\util\AccommodationPlaceFormatter;
 use DestiniaPruebaTecnica\util\AccommodationPlacePlainFormatter;
 use DestiniaPruebaTecnica\util\InputTextNormalizer;
-use function substr;
+use function substr, strlen;
 
 final class FinderService extends AccommodationPlaceService
 {
