@@ -34,7 +34,7 @@ cp .env.dist .env
 
 * PHP 8.1
 
-Ejecutar en la directorio root del proyecto:
+Ejecutar en el directorio root del proyecto:
 ```bash
 docker-compose -p destinia-prueba-tecnica --env-file .env up -d
 ```
@@ -52,7 +52,7 @@ vendor/bin/phpunit
 ```
 
 ## Script de creación de la base de datos
-Estructura de la base de datos:
+Estructura:
 ```sql
 create table room_type
 (
@@ -100,7 +100,7 @@ create table hotel
 
 ```
 
-Fixtures para mínimos para la ejecución de programa:
+Fixtures mínimos para la ejecución de programa:
 ```sql
 INSERT INTO destinia_db.room_type (id, description) VALUES (1, 'Double room');
 INSERT INTO destinia_db.room_type (id, description) VALUES (2, 'Simple room');
@@ -121,7 +121,7 @@ INSERT INTO destinia_db.hotel (id, stars_number, room_type_id) VALUES (4, 3, 2);
 ```
 
 ## Ficheros de traducciones
-Para cambiar el idioma de la interfaz es necesario modificar la variable de entorno 'LANGUAGE' en el fichero [.env](.env)
+Para cambiar el idioma de la interfaz es necesario modificar la variable de entorno __'LANGUAGE'__ en el fichero [.env](.env)
 
 Directorio de traducciones de texto de la interfaz:
 [locale](locale)
