@@ -38,7 +38,7 @@ class AccommodationPlaceFinderCLI
         $input = $this->readStd();
         while (strlen($input) === 0) {
             $this->print(
-                text: 'Please enter a valid value',
+                text: _('Please insert a valid value'),
                 colorCode: self::WARNING_CODE_COLOR
             );
             $input = $this->readStd();
@@ -53,7 +53,7 @@ class AccommodationPlaceFinderCLI
             exit;
         }
         $this->print(
-            text: _(sprintf('Found %s results', count($collection))),
+            text: sprintf(_('Found %s results'), count($collection)),
             colorCode: self::PRIMARY_CODE_COLOR
         );
         foreach ($collection as $element) {

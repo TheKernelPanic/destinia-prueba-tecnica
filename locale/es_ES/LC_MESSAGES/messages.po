@@ -26,7 +26,7 @@ msgid "No results found"
 msgstr "No se han encontrado resultados"
 
 msgid "Found %s results"
-msgstr "Se han encontrado %s resultados"
+msgstr "Se han encontrado %s resultado/s"
 
 msgid "Double room"
 msgstr "Habitación doble"
